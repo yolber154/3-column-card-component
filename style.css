@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 15px;
+	font-family: "Lexend Deca", sans-serif;
+	height: 100%;
+}
+
+body{
+	background-color: hsl(0, 0%, 95%);
+	height: 100%;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.conteiner{
+	width: 100%;
+	max-width: 1000px;
+	border-radius: .4rem;
+	margin-bottom: 2rem;
+	display: flex;
+}
+
+.column{
+	padding: 2rem;
+	transition: all .2s;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.column.active{
+	flex: 2;
+}
+
+.sedans{
+	background-color: hsl(31, 77%, 52%);
+	border-top-left-radius: .4rem;
+	border-bottom-left-radius: .4rem;
+}
+
+.suvs{background-color: hsl(184, 100%, 22%);}
+
+.luxury{
+	background-color: hsl(179, 100%, 13%);
+	border-top-right-radius: .4rem;
+	border-bottom-right-radius: .4rem;
+}
+
+.column img,
+.column h2 {margin-bottom: 2rem;}
+
+.column h2{
+	color: hsl(0, 0%, 95%);
+	font-family: "Big Shoulders Display";
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.column p{
+	color: hsla(0, 0%, 100%, 0.75);
+	line-height: 1.6;
+	margin-bottom: 6rem;
+}
+
+.column a{
+	display: inline-block;
+	text-decoration: none;
+	padding: .8rem 1.5rem;
+	border: 2px solid hsl(0, 0%, 95%);
+	border-radius: 4rem;
+	background-color: hsl(0, 0%, 95%);
+	align-self: ;
+}
+
+.sedans a{color: hsl(31, 77%, 52%);}
+.suvs a{color: hsl(184, 100%, 22%);}
+.luxury a{color: hsl(179, 100%, 13%);}
+
+.column a:hover{
+	background-color: hsla(0, 0%, 100%, 0);
+	color: hsl(0, 0%, 95%);
+}
+
+
+@media(max-width: 720px){
+	html{font-size: 13px;}
+}
+
+@media(max-width: 480px){
+	html{font-size: 12px}
+	.column{padding: 1.2rem;}
+}
+
+@media(max-width: 450px){
+	html{font-size: 15px; 
+		height: auto;
+	}
+
+	.conteiner{flex-direction: column;}
+
+	.column{
+		padding: 2rem;
+		border-radius: 0;
+	}
+
+	.sedans{
+		border-top-left-radius: .4rem;
+		border-top-right-radius: .4rem;
+	}
+
+	.luxury{
+		border-bottom-left-radius: .4rem;
+		border-bottom-right-radius: .4rem;
+	}
+
+	.column img,
+	.column h2,
+	.column p{margin-bottom: 2rem}
+}
